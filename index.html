@@ -1,75 +1,60 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>飛童動知覺</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand display-4" style="text-align:end;" href="#">
-                <img src="assets/logo-remove.png" alt="" width="67" height="40" class="d-inline-block align-text-top">
-                Home
-            </a>
-            <ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link pt-3 pb-3">首頁</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link pt-3 pb-3">加拿大留學專區</a>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      關於飛童
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">經營理念</a></li>
-                      <li><a class="dropdown-item" href="#">團隊介紹</a></li>
-                    </ul>
-                  </li>
-
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      課程資訊
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">課程表</a></li>
-                      <li><a class="dropdown-item" href="#">課程花絮</a></li>
-                      <li><a class="dropdown-item" href="#">父母常問</a></li>
-                      <li><a class="dropdown-item" href="#">動知覺課程執行園所</a></li>
-                    </ul>
-                  </li>
-
-                <li class="nav-item">
-                    <a class="nav-link pt-3 pb-3">成功案例分享</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link pt-3 pb-3">許老師專欄</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link pt-3 pb-3">立即報名</a>
-                </li>
-            </ul>
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- nav -->
+    <nav class="navbar" id="nav">
+        <div class="burger-button" onclick="hamburger()">
+            <span class="burger" id="burger-1"></span>
+            <span class="burger" id="burger-2"></span>
+            <span class="burger" id="burger-3"></span>
         </div>
+        <a href="#" class="blank">
+            <img src="assets/logo-remove.png" width="67" height="40" style="display: inline-block;">
+            飛童動知覺
+        </a>
+        
+        <ul class="nav-item">
+            
+            <li><a href="#">首頁</a></li>
+            <li><a href="#">加拿大留學專區</a></li>
+            <li class="drop-title">
+                關於飛童
+                <img src="assets/arrow.png" class="drop-icon"></img>
+                <div class="drop-connect"></div>
+                <div class="drop-menu">
+                    <a href="#">經營理念</a>
+                    <a href="#">團隊介紹</a>
+                </div>
+            </li>
+            
+            <li class="drop-title">
+                課程資訊
+                <img src="assets/arrow.png" class="drop-icon"></img>
+                <div class="drop-connect"></div>
+                <div class="drop-menu">
+                    <a href="#">課程表</a>
+                    <a href="#">課程花絮</a>
+                    <a href="#">父母常問</a>
+                    <a href="#">動知覺課程執行園所</a>
+                </div>
+            </li>
+
+            <li><a href="#">成功案例分享</a></li>
+            <li><a href="#">徐老師專欄</a></li>
+            <li><a href="#">立即報名</a></li>
+            
+        </ul>
     </nav>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
+    <!-- content -->
+    <div id="inner"></div>
+    <!-- footer -->
+</body>
+<script src="js/script.js"></script>
 </html>

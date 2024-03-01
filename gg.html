@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>飛童動知覺</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet"href="gg.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg custom-bg-nav-top position-fixed" id="cus-nav" style="width: 100%;z-index: 10;">
+        <div class="container-fluid custom-nav-small">
+            <div class="navbar-toggler collapsed custom-burger" onclick="hamburger()">
+              <span class="burger" id="burger-1"></span>
+              <span class="burger" id="burger-2"></span>
+              <span class="burger" id="burger-3"></span>
+            </div>
+            <a class="navbar-brand display-4" style="vertical-align:baseline;" href="#">
+                <img src="assets/logo-remove.png" alt="" width="67" height="40" class="d-inline-block">
+                飛童動知覺
+            </a>
+            
+
+            <div class="collapse nav-collapse" id="navbarText-large" aria-expanded="false">
+              <ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0" >
+                  <li class="nav-item">
+                    <a class="nav-link pt-3 pb-3">首頁</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link pt-3 pb-3">加拿大留學專區</a>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle pt-3 pb-3"  href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        關於飛童
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">經營理念</a></li>
+                        <li><a class="dropdown-item" href="#">團隊介紹</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle pt-3 pb-3" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        課程資訊
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">課程表</a></li>
+                        <li><a class="dropdown-item" href="#">課程花絮</a></li>
+                        <li><a class="dropdown-item" href="#">父母常問</a></li>
+                        <li><a class="dropdown-item" href="#">動知覺課程執行園所</a></li>
+                      </ul>
+                    </li>
+
+                  <li class="nav-item">
+                      <a class="nav-link pt-3 pb-3">成功案例分享</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link pt-3 pb-3">許老師專欄</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link pt-3 pb-3">立即報名</a>
+                  </li>
+              </ul>
+          </div>
+        </div>
+    </nav>
+    <div class="container-fluid" id="custom-nav">
+      <div id="custom-nav-left">
+        <ul>
+          <li></li>
+        </ul>
+      </div>
+      <div id="custom-nav-right"></div>
+    </div>
+
+    
+
+    <div class="container-fluid custom-bg-home">
+
+    </div>
+
+    <div class="container-fluid custom-bg-home-about"></div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+      let burger_aciton = false
+      const hamburger = ()=>{
+        let burger_1 = document.getElementById("burger-1")
+        let burger_2 = document.getElementById("burger-2")
+        let burger_3 = document.getElementById("burger-3")
+        let nav = document.getElementById("custom-nav")
+
+        if(burger_aciton){
+          burger_1.classList.remove("burger-action-1")
+          burger_2.classList.remove("burger-action-2")
+          burger_3.classList.remove("burger-action-3")
+          nav.classList.remove("custom-nav-action")
+        }else{
+          burger_1.classList.add("burger-action-1")
+          burger_2.classList.add("burger-action-2")
+          burger_3.classList.add("burger-action-3")
+          nav.classList.add("custom-nav-action")
+        }
+        burger_aciton = !burger_aciton
+       
+
+      }
+      const scroll = ()=>{
+        const scrollTop = document.documentElement.scrollTop;
+        let nav = document.getElementById("cus-nav");
+        console.log(scrollTop)
+        if(scrollTop == 0){
+          nav.classList.remove("custom-bg-nav");
+          nav.classList.add("custom-bg-nav-top");
+        }else{
+          nav.classList.remove("custom-bg-nav-top");
+          nav.classList.add("custom-bg-nav");
+        }
+      }
+      window.addEventListener("scroll",scroll);
+      
+    </script>
+  </body>
+</html>

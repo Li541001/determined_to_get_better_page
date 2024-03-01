@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /*padding不會改變到div的大小*/
+    font-family: "Quicksand",sans-serif;  /*字體*/
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+.nav-item{
+    cursor: pointer;
+}
+
+.custom-bg-nav-top{
+    background:transparent;
+}
+
+#navbarText-large *{
+    color:black;    
+    font-weight: bold;
+}
+
+.custom-bg-nav{
+    background:#4f474e;
+    transition: 0.4s;
+    
+}
+.custom-bg-nav *{
+    color:#ffffff;
+}
+
+.custom-bg-home{
+    position: relative;
+    background:radial-gradient(ellipse at top,#42b9cd,#41dcbd);
+    height: 100vh;
+    z-index: -1;
+}
+
+.custom-bg-home-about{
+    background:#41e2ba;
+    height: 110vh;
+}
+
+.custom-burger{
+    position: relative;
+    width: 30px;
+    height: 31px;
+    border-style: none;
+    
+}
+.custom-burger:hover{
+    border-style: none;
+}
+
+.burger{
+    position: absolute;
+    background-color: black;
+    width: 80%;
+    height: 3px;
+    left: 10%;
+    border-radius: 20%;
+    transition: 1s;
+}
+
+#burger-1{
+    top:5px;
+}
+#burger-2{
+    top:13px;
+}
+#burger-3{
+    top:21px;
+}
+
+.burger-action-1{
+    transform: rotate(45deg) translateX(4px) translateY(7px);
+}
+.burger-action-2{
+    transform:scale(0%);
+}
+.burger-action-3{
+    transform: rotate(-45deg) translateX(4px) translateY(-7px);
+}
+
+
+
+.custom-nav-small{
+    justify-content: start !important;
+}
+
+#custom-nav{
+    position: absolute;
+    top:0;
+    left: -100%;
+    transition: 1s ease-out;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+.custom-nav-action{
+    transform: translateX(100%);
+}
+
+.custom-nav-action #custom-nav-right{
+    filter: opacity(50%);
+}
+
+#custom-nav-left{
+    position: relative;
+    background-color: #4f474e;
+    width: 30%;
+    
+    height: 100vh;
+}
+
+
+#custom-nav-right{
+    position: relative;
+    background-color: gray;
+    width: 70%;
+    height: 100vh;
+}
+
+
+
+@media(min-width:992px){
+    .custom-nav-small{
+        justify-content: space-between !important;
+    }
+    #navbarText-large{
+        display: flex !important;
+    }
+}
