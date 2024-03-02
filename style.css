@@ -53,6 +53,10 @@ ul{
     color: #ffffff;
 }
 
+.navbar-top-active .burger{
+    background-color: #ffffff !important;
+}
+
 .navbar a:hover,li:hover{
     color: rgb(66, 66, 66);
 }
@@ -64,8 +68,9 @@ ul{
 .blank{
     display: flex;
     align-items: center;
-    margin-left: 0.8rem;
-    gap: 5px;
+    margin-left: 10px;
+    white-space:nowrap;
+    width: 200px;
 }
 
 .nav-item{
@@ -124,7 +129,7 @@ ul{
     width: 30px;
     height: 31px;
     border-style: none;
-    margin-left: 1rem;
+    margin-left: 15px;
 }
 .burger-button:hover{
     border-style: none;
@@ -166,11 +171,39 @@ ul{
         justify-content: start;
     }
     .nav-item{
-        display: none;
+        background-color: #4f474e;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 72px;
+        width: 30%;
+        height: 95vh;
+        transform: translateX(-200%);
+        transition: 1s;
+        border-top-right-radius: 5px;
+    }
+    .nav-item a{
+        color: #ffffff;
+    }
+    .nav-item li{
+        color: #ffffff;
+    }
+    .nav-item a:hover{
+        color: #c8c8c8;
+    }
+    .nav-item li:hover{
+        color: #c8c8c8;
+    }
+    .drop-menu{
+        left: 35%;
     }
     .burger-button{
         display: block;
     }
+}
+
+.nav-item-action{
+    transform: translateX(0%);
 }
 
 

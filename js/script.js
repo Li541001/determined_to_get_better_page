@@ -55,10 +55,12 @@ const hamburger = () =>{
         $("#burger-1").removeClass("burger-action-1");
         $("#burger-2").removeClass("burger-action-2");
         $("#burger-3").removeClass("burger-action-3");
+        $(".nav-item").removeClass("nav-item-action");
     }else{
         $("#burger-1").addClass("burger-action-1");
         $("#burger-2").addClass("burger-action-2");
         $("#burger-3").addClass("burger-action-3");
+        $(".nav-item").addClass("nav-item-action");
     }
     burger_aciton = !burger_aciton
 }
